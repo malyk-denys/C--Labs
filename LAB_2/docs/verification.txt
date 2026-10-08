@@ -1,0 +1,536 @@
+﻿PASS: common_tests exit code 0
+
+--- common_tests  | input:  | elapsed_ms=464 ---
+PASS: primality, sieve, range checks, strict parsing
+
+PASS: task_1 exit code 0
+
+--- task_1  | input: -5 0 1 2 3 4 17 25 97 q  | elapsed_ms=365 ---
+Цілі числа через пробіл; q завершує введення:
+Прості числа: 2 3 17 97
+
+PASS: task_1 prime filtering
+PASS: task_1 exit code 0
+
+--- task_1  | input: q  | elapsed_ms=197 ---
+Цілі числа через пробіл; q завершує введення:
+Прості числа:
+
+PASS: task_1 empty list
+PASS: task_1 exit code 0
+
+--- task_1  | input: abc 2 12abc 7 9223372036854775808 q  | elapsed_ms=200 ---
+Цілі числа через пробіл; q завершує введення:
+Пропущено некоректне число: abc
+Пропущено некоректне число: 12abc
+Пропущено некоректне число: 9223372036854775808
+Прості числа: 2 7
+
+PASS: task_1 invalid tokens skipped
+PASS: task_1 exit code 0
+
+--- task_1  | input: 2 11 | elapsed_ms=201 ---
+Цілі числа через пробіл; q завершує введення:
+Прості числа: 2 11
+
+PASS: task_1 EOF publishes data
+PASS: task_1 exit code 0
+
+--- task_1  | input:  | elapsed_ms=200 ---
+Цілі числа через пробіл; q завершує введення:
+Прості числа:
+
+PASS: task_4 exit code 0
+
+--- task_4  | input: -5 0 1 2 3 4 17 25 97 q  | elapsed_ms=316 ---
+Цілі числа через пробіл; q завершує введення:
+Прості числа: 2 3 17 97
+
+PASS: task_4 prime filtering
+PASS: task_4 exit code 0
+
+--- task_4  | input: q  | elapsed_ms=93 ---
+Цілі числа через пробіл; q завершує введення:
+Прості числа:
+
+PASS: task_4 empty list
+PASS: task_4 exit code 0
+
+--- task_4  | input: abc 2 12abc 7 9223372036854775808 q  | elapsed_ms=94 ---
+Цілі числа через пробіл; q завершує введення:
+Пропущено некоректне число: abc
+Пропущено некоректне число: 12abc
+Пропущено некоректне число: 9223372036854775808
+Прості числа: 2 7
+
+PASS: task_4 invalid tokens skipped
+PASS: task_4 exit code 0
+
+--- task_4  | input: 2 11 | elapsed_ms=95 ---
+Цілі числа через пробіл; q завершує введення:
+Прості числа: 2 11
+
+PASS: task_4 EOF publishes data
+PASS: task_4 exit code 0
+
+--- task_4  | input:  | elapsed_ms=94 ---
+Цілі числа через пробіл; q завершує введення:
+Прості числа:
+
+PASS: task_2 exit code 0
+
+--- task_2  | input:  | elapsed_ms=508 ---
+Потік 1: початок очікування
+Потік 2: початок очікування
+Потік 3: початок очікування
+Awake: перше notify_all, i=0
+Awake: друге notify_all, i=1
+Потік 1: очікування завершене, i=1
+Потік 2: очікування завершене, i=1
+Потік 3: очікування завершене, i=1
+
+PASS: task_2 run 1 three completions
+PASS: task_2 run 1 no early completion
+PASS: task_3 exit code 0
+
+--- task_3  | input:  | elapsed_ms=393 ---
+Thread1: початок очікування
+Thread2: початок очікування
+Thread3: початок очікування
+Notify: notify_one та i=1 під одним м'ютексом
+Повідомлення з потоку 1
+Службове завершення решти потоків
+
+PASS: task_3 run 1 exactly one message
+PASS: task_2 exit code 0
+
+--- task_2  | input:  | elapsed_ms=310 ---
+Потік 1: початок очікування
+Потік 2: початок очікування
+Потік 3: початок очікування
+Awake: перше notify_all, i=0
+Awake: друге notify_all, i=1
+Потік 2: очікування завершене, i=1
+Потік 1: очікування завершене, i=1
+Потік 3: очікування завершене, i=1
+
+PASS: task_2 run 2 three completions
+PASS: task_2 run 2 no early completion
+PASS: task_3 exit code 0
+
+--- task_3  | input:  | elapsed_ms=200 ---
+Thread1: початок очікування
+Thread2: початок очікування
+Thread3: початок очікування
+Notify: notify_one та i=1 під одним м'ютексом
+Повідомлення з потоку 1
+Службове завершення решти потоків
+
+PASS: task_3 run 2 exactly one message
+PASS: task_2 exit code 0
+
+--- task_2  | input:  | elapsed_ms=313 ---
+Потік 1: початок очікування
+Потік 2: початок очікування
+Потік 3: початок очікування
+Awake: перше notify_all, i=0
+Awake: друге notify_all, i=1
+Потік 3: очікування завершене, i=1
+Потік 2: очікування завершене, i=1
+Потік 1: очікування завершене, i=1
+
+PASS: task_2 run 3 three completions
+PASS: task_2 run 3 no early completion
+PASS: task_3 exit code 0
+
+--- task_3  | input:  | elapsed_ms=200 ---
+Thread1: початок очікування
+Thread2: початок очікування
+Thread3: початок очікування
+Notify: notify_one та i=1 під одним м'ютексом
+Повідомлення з потоку 1
+Службове завершення решти потоків
+
+PASS: task_3 run 3 exactly one message
+PASS: task_2 exit code 0
+
+--- task_2  | input:  | elapsed_ms=312 ---
+Потік 1: початок очікування
+Потік 2: початок очікування
+Потік 3: початок очікування
+Awake: перше notify_all, i=0
+Awake: друге notify_all, i=1
+Потік 2: очікування завершене, i=1
+Потік 1: очікування завершене, i=1
+Потік 3: очікування завершене, i=1
+
+PASS: task_2 run 4 three completions
+PASS: task_2 run 4 no early completion
+PASS: task_3 exit code 0
+
+--- task_3  | input:  | elapsed_ms=198 ---
+Thread1: початок очікування
+Thread2: початок очікування
+Thread3: початок очікування
+Notify: notify_one та i=1 під одним м'ютексом
+Повідомлення з потоку 1
+Службове завершення решти потоків
+
+PASS: task_3 run 4 exactly one message
+PASS: task_2 exit code 0
+
+--- task_2  | input:  | elapsed_ms=311 ---
+Потік 1: початок очікування
+Потік 2: початок очікування
+Потік 3: початок очікування
+Awake: перше notify_all, i=0
+Awake: друге notify_all, i=1
+Потік 2: очікування завершене, i=1
+Потік 3: очікування завершене, i=1
+Потік 1: очікування завершене, i=1
+
+PASS: task_2 run 5 three completions
+PASS: task_2 run 5 no early completion
+PASS: task_3 exit code 0
+
+--- task_3  | input:  | elapsed_ms=200 ---
+Thread1: початок очікування
+Thread2: початок очікування
+Thread3: початок очікування
+Notify: notify_one та i=1 під одним м'ютексом
+Повідомлення з потоку 1
+Службове завершення решти потоків
+
+PASS: task_3 run 5 exactly one message
+PASS: task_2 exit code 0
+
+--- task_2  | input:  | elapsed_ms=312 ---
+Потік 1: початок очікування
+Потік 2: початок очікування
+Потік 3: початок очікування
+Awake: перше notify_all, i=0
+Awake: друге notify_all, i=1
+Потік 1: очікування завершене, i=1
+Потік 3: очікування завершене, i=1
+Потік 2: очікування завершене, i=1
+
+PASS: task_2 run 6 three completions
+PASS: task_2 run 6 no early completion
+PASS: task_3 exit code 0
+
+--- task_3  | input:  | elapsed_ms=202 ---
+Thread1: початок очікування
+Thread2: початок очікування
+Thread3: початок очікування
+Notify: notify_one та i=1 під одним м'ютексом
+Повідомлення з потоку 1
+Службове завершення решти потоків
+
+PASS: task_3 run 6 exactly one message
+PASS: task_2 exit code 0
+
+--- task_2  | input:  | elapsed_ms=309 ---
+Потік 1: початок очікування
+Потік 2: початок очікування
+Потік 3: початок очікування
+Awake: перше notify_all, i=0
+Awake: друге notify_all, i=1
+Потік 3: очікування завершене, i=1
+Потік 1: очікування завершене, i=1
+Потік 2: очікування завершене, i=1
+
+PASS: task_2 run 7 three completions
+PASS: task_2 run 7 no early completion
+PASS: task_3 exit code 0
+
+--- task_3  | input:  | elapsed_ms=202 ---
+Thread1: початок очікування
+Thread2: початок очікування
+Thread3: початок очікування
+Notify: notify_one та i=1 під одним м'ютексом
+Повідомлення з потоку 1
+Службове завершення решти потоків
+
+PASS: task_3 run 7 exactly one message
+PASS: task_2 exit code 0
+
+--- task_2  | input:  | elapsed_ms=311 ---
+Потік 1: початок очікування
+Потік 2: початок очікування
+Потік 3: початок очікування
+Awake: перше notify_all, i=0
+Awake: друге notify_all, i=1
+Потік 1: очікування завершене, i=1
+Потік 2: очікування завершене, i=1
+Потік 3: очікування завершене, i=1
+
+PASS: task_2 run 8 three completions
+PASS: task_2 run 8 no early completion
+PASS: task_3 exit code 0
+
+--- task_3  | input:  | elapsed_ms=200 ---
+Thread1: початок очікування
+Thread2: початок очікування
+Thread3: початок очікування
+Notify: notify_one та i=1 під одним м'ютексом
+Повідомлення з потоку 1
+Службове завершення решти потоків
+
+PASS: task_3 run 8 exactly one message
+PASS: task_2 exit code 0
+
+--- task_2  | input:  | elapsed_ms=310 ---
+Потік 1: початок очікування
+Потік 2: початок очікування
+Потік 3: початок очікування
+Awake: перше notify_all, i=0
+Awake: друге notify_all, i=1
+Потік 3: очікування завершене, i=1
+Потік 2: очікування завершене, i=1
+Потік 1: очікування завершене, i=1
+
+PASS: task_2 run 9 three completions
+PASS: task_2 run 9 no early completion
+PASS: task_3 exit code 0
+
+--- task_3  | input:  | elapsed_ms=199 ---
+Thread1: початок очікування
+Thread2: початок очікування
+Thread3: початок очікування
+Notify: notify_one та i=1 під одним м'ютексом
+Повідомлення з потоку 1
+Службове завершення решти потоків
+
+PASS: task_3 run 9 exactly one message
+PASS: task_2 exit code 0
+
+--- task_2  | input:  | elapsed_ms=310 ---
+Потік 1: початок очікування
+Потік 2: початок очікування
+Потік 3: початок очікування
+Awake: перше notify_all, i=0
+Awake: друге notify_all, i=1
+Потік 2: очікування завершене, i=1
+Потік 1: очікування завершене, i=1
+Потік 3: очікування завершене, i=1
+
+PASS: task_2 run 10 three completions
+PASS: task_2 run 10 no early completion
+PASS: task_3 exit code 0
+
+--- task_3  | input:  | elapsed_ms=202 ---
+Thread1: початок очікування
+Thread2: початок очікування
+Thread3: початок очікування
+Notify: notify_one та i=1 під одним м'ютексом
+Повідомлення з потоку 1
+Службове завершення решти потоків
+
+PASS: task_3 run 10 exactly one message
+PASS: task_5 exit code 0
+
+--- task_5  | input: 10 1 3  | elapsed_ms=319 ---
+Номер простого числа (1..10000000 або q): 
+Режим deferred
+Функція від n: 1=sqrt, 2=sin (радіани), 3=ln, 0=пропустити: sqrt(n)=3.16228
+prime(10)=29
+RESULT mode=deferred n=10 prime=29 wait_ms=0.028 total_ms=0.170
+
+Режим async
+Функція від n: 1=sqrt, 2=sin (радіани), 3=ln, 0=пропустити: ln(n)=2.303
+prime(10)=29
+RESULT mode=async n=10 prime=29 wait_ms=0.133 total_ms=0.210
+
+PASS: task_5 both policies
+PASS: task_5 function choices
+PASS: task_5 exit code 0
+
+--- task_5  | input: 0 -2 abc 10000001 1 2 0  | elapsed_ms=103 ---
+Номер простого числа (1..10000000 або q): Некоректний номер. Введіть 1..10000000 або q: Некоректний номер. Введіть 1..10000000 або q: Некоректний номер. Введіть 1..10000000 або q: Некоректний номер. Введіть 1..10000000 або q: 
+Режим deferred
+Функція від n: 1=sqrt, 2=sin (радіани), 3=ln, 0=пропустити: sin(n)=0.841471
+prime(1)=2
+RESULT mode=deferred n=1 prime=2 wait_ms=0.016 total_ms=0.131
+
+Режим async
+Функція від n: 1=sqrt, 2=sin (радіани), 3=ln, 0=пропустити: prime(1)=2
+RESULT mode=async n=1 prime=2 wait_ms=0.133 total_ms=0.204
+
+PASS: task_5 invalid n recovery and sin
+PASS: task_5 exit code 1
+
+--- task_5 --benchmark 0 | input:  | elapsed_ms=96 ---
+Помилка: Usage: task_5 --benchmark [n: 1..10000000]
+
+PASS: task_5 exit code 0
+
+--- task_5  | input: q  | elapsed_ms=94 ---
+Номер простого числа (1..10000000 або q): 
+PASS: task_5 exit code 0
+
+--- task_5 --benchmark 1000000 | input:  | elapsed_ms=1162 ---
+Benchmark: 500 ms simulated user work per mode
+
+Режим deferred
+sqrt(n)=1000
+prime(1000000)=15485863
+RESULT mode=deferred n=1000000 prime=15485863 wait_ms=39.815 total_ms=554.375
+
+Режим async
+sqrt(n)=1000.000
+prime(1000000)=15485863
+RESULT mode=async n=1000000 prime=15485863 wait_ms=0.043 total_ms=509.636
+
+PASS: benchmark 1 millionth prime
+PASS: task_5 exit code 0
+
+--- task_5 --benchmark 1000000 | input:  | elapsed_ms=1147 ---
+Benchmark: 500 ms simulated user work per mode
+
+Режим deferred
+sqrt(n)=1000
+prime(1000000)=15485863
+RESULT mode=deferred n=1000000 prime=15485863 wait_ms=39.382 total_ms=549.304
+
+Режим async
+sqrt(n)=1000.000
+prime(1000000)=15485863
+RESULT mode=async n=1000000 prime=15485863 wait_ms=0.031 total_ms=505.574
+
+PASS: benchmark 2 millionth prime
+PASS: task_5 exit code 0
+
+--- task_5 --benchmark 1000000 | input:  | elapsed_ms=1151 ---
+Benchmark: 500 ms simulated user work per mode
+
+Режим deferred
+sqrt(n)=1000
+prime(1000000)=15485863
+RESULT mode=deferred n=1000000 prime=15485863 wait_ms=39.815 total_ms=549.317
+
+Режим async
+sqrt(n)=1000.000
+prime(1000000)=15485863
+RESULT mode=async n=1000000 prime=15485863 wait_ms=0.040 total_ms=505.719
+
+PASS: benchmark 3 millionth prime
+PASS: task_6 exit code 0
+
+--- task_6  | input: 1 2 10 100 q  | elapsed_ms=302 ---
+Номери простих чисел (1..10000000), q завершує введення:
+prime(1)=2
+prime(2)=3
+prime(10)=29
+prime(100)=541
+Усі завдання виконані; робочий потік завершено
+
+PASS: task_6 prime(1)=2
+PASS: task_6 prime(2)=3
+PASS: task_6 prime(10)=29
+PASS: task_6 prime(100)=541
+PASS: task_6 exit code 0
+
+--- task_6  | input: q  | elapsed_ms=92 ---
+Номери простих чисел (1..10000000), q завершує введення:
+Усі завдання виконані; робочий потік завершено
+
+PASS: task_6 exit code 0
+
+--- task_6  | input:  | elapsed_ms=94 ---
+Номери простих чисел (1..10000000), q завершує введення:
+Усі завдання виконані; робочий потік завершено
+
+PASS: task_6 exit code 0
+
+--- task_6  | input: 0 abc -3 10000001 10 | elapsed_ms=93 ---
+Номери простих чисел (1..10000000), q завершує введення:
+Некоректний номер. Введіть 1..10000000 або q: Некоректний номер. Введіть 1..10000000 або q: Некоректний номер. Введіть 1..10000000 або q: Некоректний номер. Введіть 1..10000000 або q: prime(10)=29
+Усі завдання виконані; робочий потік завершено
+
+PASS: task_6 invalid n and EOF
+PASS: task_6 exit code 0
+
+--- task_6  | input: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 q | elapsed_ms=94 ---
+Номери простих чисел (1..10000000), q завершує введення:
+prime(1)=2
+prime(2)=3
+prime(3)=5
+prime(4)=7
+prime(5)=11
+prime(6)=13
+prime(7)=17
+prime(8)=19
+prime(9)=23
+prime(10)=29
+prime(11)=31
+prime(12)=37
+prime(13)=41
+prime(14)=43
+prime(15)=47
+prime(16)=53
+prime(17)=59
+prime(18)=61
+prime(19)=67
+prime(20)=71
+prime(21)=73
+prime(22)=79
+prime(23)=83
+prime(24)=89
+prime(25)=97
+prime(26)=101
+prime(27)=103
+prime(28)=107
+prime(29)=109
+prime(30)=113
+prime(31)=127
+prime(32)=131
+prime(33)=137
+prime(34)=139
+prime(35)=149
+prime(36)=151
+prime(37)=157
+prime(38)=163
+prime(39)=167
+prime(40)=173
+prime(41)=179
+prime(42)=181
+prime(43)=191
+prime(44)=193
+prime(45)=197
+prime(46)=199
+prime(47)=211
+prime(48)=223
+prime(49)=227
+prime(50)=229
+Усі завдання виконані; робочий потік завершено
+
+PASS: task_6 drains 50 queued jobs
+PASS: task_7 exit code 0
+
+--- task_7  | input: 10  | elapsed_ms=2271 ---
+n (1..1000000 або q; також обчислюється prime(10*n)): 
+prime(10)=29
+prime(100)=541
+sqrt(10)=3.16228
+
+PASS: task_7 all three results
+PASS: task_7 waits for two-second worker
+PASS: task_7 exit code 0
+
+--- task_7  | input: 0 abc 1000001 1  | elapsed_ms=2097 ---
+n (1..1000000 або q; також обчислюється prime(10*n)): Некоректний номер. Введіть 1..1000000 або q: Некоректний номер. Введіть 1..1000000 або q: Некоректний номер. Введіть 1..1000000 або q: 
+prime(1)=2
+prime(10)=29
+sqrt(1)=1
+
+PASS: task_7 range validation
+PASS: task_7 exit code 0
+
+--- task_7  | input: q  | elapsed_ms=93 ---
+n (1..1000000 або q; також обчислюється prime(10*n)): 
+PASS: task_7 exit code 0
+
+--- task_7  | input:  | elapsed_ms=96 ---
+n (1..1000000 або q; також обчислюється prime(10*n)): 
+
+ALL CHECKS PASSED: 100

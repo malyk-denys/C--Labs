@@ -1,0 +1,29 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build all",
+      "type": "process",
+      "command": "powershell.exe",
+      "args": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "${workspaceFolder}/build.ps1"],
+      "group": { "kind": "build", "isDefault": true },
+      "problemMatcher": "$gcc"
+    },
+    {
+      "label": "Run task",
+      "type": "process",
+      "command": "powershell.exe",
+      "args": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "${workspaceFolder}/run.ps1", "-Task", "${input:taskNumber}"],
+      "problemMatcher": "$gcc",
+      "presentation": { "reveal": "always", "focus": true, "panel": "dedicated" }
+    },
+    {
+      "label": "Verify all",
+      "type": "process",
+      "command": "powershell.exe",
+      "args": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "${workspaceFolder}/tests/verify.ps1"],
+      "problemMatcher": []
+    }
+  ],
+  "inputs": [{ "id": "taskNumber", "type": "pickString", "description": "Task number", "options": ["1", "2", "3", "4", "5", "6", "7"], "default": "1" }]
+}

@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "configurations": [{
+    "name": "Debug current task (open task_N.cpp)",
+    "type": "cppdbg",
+    "request": "launch",
+    "program": "${workspaceFolder}/build/${fileBasenameNoExtension}.exe",
+    "args": [],
+    "stopAtEntry": false,
+    "cwd": "${workspaceFolder}",
+    "externalConsole": true,
+    "MIMode": "gdb",
+    "miDebuggerPath": "${env:USERPROFILE}/gcc/bin/gdb.exe",
+    "preLaunchTask": "Build all"
+  }]
+}
